@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int age =sc.nextInt();
+        String str=sc.next();
+        if(age<12){
+            if(str.equals("saturday")||str.equals("sunday")){
+                System.out.println(80);}
+            else{
+                System.out.println(100);} }  
+            else if(age>=12&&age<60){
+            if(str.equals("saturday")||str.equals("sunday")){
+                System.out.println(120);}
+            else{
+                System.out.println(150);} }  
+            else if(age>=60){
+             if(str.equals("saturday")||str.equals("sunday")){
+                System.out.println(70);}
+            else{
+                System.out.println(90);}   }
+        }
+    }
