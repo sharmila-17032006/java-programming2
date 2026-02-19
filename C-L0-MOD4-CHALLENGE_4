@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        long rem,rev=0;
+        while(n!=0){
+            rem=n%10;
+            rev=rev*10+rem;
+            n=n/10;
+        }
+        n=rev;
+        while(n!=0){
+            rem=n%10;
+            if(rem==2 || rem==3 || rem==5 || rem==7){
+                System.out.print(rem+" ");
+            }
+            n=n/10;
+        }
+        
+    }
+}
