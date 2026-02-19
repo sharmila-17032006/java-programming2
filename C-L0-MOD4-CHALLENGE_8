@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int num=sc.nextInt();
+        int rem,rev1=0,rev2=0,sq2;
+        int sq1=num*num;
+        while(num!=0){
+            rem=num%10;
+            rev1=rev1*10+rem;
+            num=num/10;
+        }
+        sq2=rev1*rev1;
+        while(sq2!=0){
+            rem=sq2%10;
+            rev2=rev2*10+rem;
+            sq2=sq2/10;
+        }
+        if(sq1==rev2){
+            System.out.println("Adam Number");
+        }
+        else{
+            System.out.println("Not a adam number");
+        }
+        
+    }
+}
